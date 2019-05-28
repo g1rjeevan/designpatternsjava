@@ -1,6 +1,6 @@
 package com.java.designpatterns.creational.singleton;
 
-public class BillPughSingleton {
+public class BillPughSingleton implements Singleton {
     private BillPughSingleton() {
     }
 

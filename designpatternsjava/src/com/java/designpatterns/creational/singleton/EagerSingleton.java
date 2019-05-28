@@ -1,6 +1,6 @@
 package com.java.designpatterns.creational.singleton;
 
-public class EagerSingleton {
+public class EagerSingleton implements Singleton {
     private static volatile EagerSingleton eagerSingleton = new EagerSingleton();
 
     private EagerSingleton() {

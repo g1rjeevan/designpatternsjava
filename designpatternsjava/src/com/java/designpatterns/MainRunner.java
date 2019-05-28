@@ -1,6 +1,9 @@
 package com.java.designpatterns;
 
+import com.java.designpatterns.creational.singleton.BillPughSingleton;
 import com.java.designpatterns.creational.singleton.EagerSingleton;
+import com.java.designpatterns.creational.singleton.LazySingleton;
+import com.java.designpatterns.creational.singleton.StaticBlockSingleton;
 
 public class MainRunner {
     public static void main(String[] args) {
@@ -12,13 +15,30 @@ public class MainRunner {
 
         System.out.println("eagerSingleton.hashCode() :" + eagerSingleton.hashCode());
 
-        EagerSingleton eagerSingleton_ = EagerSingleton.getInstance();
+        LazySingleton lazySingleton = LazySingleton.getInstance();
 
-        System.out.println("eagerSingleton_.hashCode() :" + eagerSingleton_.hashCode());
+        System.out.println("lazySingleton.hashCode() :" + lazySingleton.hashCode());
 
-        eagerSingleton_ = EagerSingleton.getInstance();
+        lazySingleton = LazySingleton.getInstance();
 
-        System.out.println("eagerSingleton_.hashCode() :" + eagerSingleton_.hashCode());
+        System.out.println("lazySingleton.hashCode() :" + lazySingleton.hashCode());
+
+        StaticBlockSingleton staticBlockSingleton = StaticBlockSingleton.getInstance();
+
+        System.out.println("staticBlockSingleton.hashCode() :" + staticBlockSingleton.hashCode());
+
+        staticBlockSingleton = StaticBlockSingleton.getInstance();
+
+        System.out.println("staticBlockSingleton.hashCode() :" + staticBlockSingleton.hashCode());
+
+        BillPughSingleton billPughSingleton = BillPughSingleton.getInstance();
+
+        System.out.println("billPughSingleton.hashCode() :" + billPughSingleton.hashCode());
+
+        billPughSingleton = BillPughSingleton.getInstance();
+
+        System.out.println("billPughSingleton.hashCode() :" + billPughSingleton.hashCode());
 
     }
+
 }

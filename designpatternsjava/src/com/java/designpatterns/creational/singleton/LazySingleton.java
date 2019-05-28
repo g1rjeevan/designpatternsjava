@@ -1,6 +1,6 @@
 package com.java.designpatterns.creational.singleton;
 
-public class LazySingleton {
+public class LazySingleton implements Singleton {
     private static volatile LazySingleton instance = null;
 
     // private constructor
