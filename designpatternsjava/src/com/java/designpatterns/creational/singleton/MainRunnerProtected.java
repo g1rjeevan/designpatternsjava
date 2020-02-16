@@ -1,18 +1,17 @@
-package com.java.designpatterns;
+package com.java.designpatterns.creational.singleton;
 
-import com.java.designpatterns.creational.singleton.BillPughSingleton;
-import com.java.designpatterns.creational.singleton.EagerSingleton;
-import com.java.designpatterns.creational.singleton.LazySingleton;
-import com.java.designpatterns.creational.singleton.StaticBlockSingleton;
+public class MainRunnerProtected {
 
-public class MainRunner {
     public static void main(String[] args) {
         EagerSingleton eagerSingleton = EagerSingleton.getInstance();
 
         System.out.println("eagerSingleton.hashCode() :" + eagerSingleton.hashCode());
 
         eagerSingleton = EagerSingleton.getInstance();
-
+        eagerSingleton.clone();
+        Singleton singleton = eagerSingleton;
+        SingletonAbstract singletonAbstract = (SingletonAbstract) singleton;
+        singletonAbstract.clone();
 
         System.out.println("eagerSingleton.hashCode() :" + eagerSingleton.hashCode());
 
@@ -41,5 +40,4 @@ public class MainRunner {
         System.out.println("billPughSingleton.hashCode() :" + billPughSingleton.hashCode());
 
     }
-
 }

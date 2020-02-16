@@ -1,6 +1,6 @@
 package com.java.designpatterns.creational.singleton;
 
-public class StaticBlockSingleton implements Singleton {
+public class StaticBlockSingleton extends SingletonAbstract {
     private static final StaticBlockSingleton INSTANCE;
 
     static {
@@ -17,4 +17,5 @@ public class StaticBlockSingleton implements Singleton {
     public static StaticBlockSingleton getInstance() {
         return INSTANCE;
     }
+
 }
