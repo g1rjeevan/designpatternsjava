@@ -5,8 +5,8 @@ public class SingletonMainrunner {
     public static void main(String[] args) {
         execution(EagerSingleton.getInstance());
         execution(LazySingleton.getInstance());
-        execution(StaticBlockSingleton.getInstance());
         execution(BillPughSingleton.getInstance());
+        execution(StaticBlockSingleton.getInstance());
 
         execution(EagerSingleton.getInstance());
         execution(LazySingleton.getInstance());
